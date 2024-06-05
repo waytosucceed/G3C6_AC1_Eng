@@ -1,0 +1,222 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+      
+        <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <div>
+            <h2 id="about">Adjectives</h2>
+        </div>
+          
+         <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+              
+                    Today, we're going to embark on an exciting adventure into the world of adjectives. <br><br>
+
+                    Have you ever wondered how we can make our words more colourful, more vivid, and more interesting? Well, that's where <span style="color: red;"> adjectives</span> come into play! <br><br>
+                    
+                    Imagine you are in a beautiful garden with many different kinds of flowers. If you just say "flowers", it does not really tell us much about them, does it?  <br><br>
+                    
+                    But what if you said "bright red roses", "beautiful white lilies", or "tall sunflowers with yellow petals"? 
+                    
+                    That sounds much better, right?
+                      
+             
+                           
+                </p>       
+            </div>
+        </center>
+        </div>
+        <br>
+        <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+        <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+        <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+       
+     
+
+
+        </center>   
+
+        <script>
+
+            var images = ["Assests/1.jpg", "Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg", "Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg"];
+            var para=["<img src='1th.jpg' style='width: 100%;' alt=''>",
+                 
+                      "Lily was a curious little girl who loved exploring her grandma's attic. One day, she stumbled upon an old, dusty music box tucked away in the corner. As she wound it up, the most enchanting melody filled the air, and something extraordinary happened.",
+
+                      "It tells us that Lily was interested in exploring and discovering new things. <br><br>That means, the word “<span style='color: red;font-style:italic;'>curious</span>” is an adjective because it describes the noun in the sentence which is “Lily”.<br><br>Now, we will take another sentence and we will try to pick out all the adjectives given in that sentence.",
+
+                      "'<span style='font-weight: bolder;'>Old</span>' This adjective describes the age or condition of the music box. It tells us that the music box has been around for a long time and is not new or recently made. <br><br>'<span style='font-weight: bolder;'>Dusty</span>' This adjective gives us an idea of the physical appearance and state of the music box. It suggests that the music box has been untouched for a while, allowing dust to collect on its surface. <br><br>Adjectives are those words used to describe or provide more information about a noun or pronoun that acts as the subject in a sentence. <br><br> <span style='color:purple;'>Fun fact</span>: <span style='color:Purple;'> Adjectives are found after the verb or before the noun it modifies.</span> <br><br>Let’s move ahead and see what is happening in the story……",
+
+                      "Suddenly, tiny dancers emerged from the music box, twirling and leaping gracefully. Lily gasped in delight as she watched them perform an intricate dance. But just as quickly as they had appeared, the dancers vanished back into the music box when the music stopped. <br><br>Lily couldn't wait to show her grandma the magical discovery. When her grandma saw the music box, tears of joy filled her eyes. 'This was my most cherished possession as a child,' she explained. 'I thought it was lost forever.'",
+
+                      "Fun fact:<br><span style='color: blue;'>Adjectives of quality can also describe verbs or other adjectives, not just nouns.</span><br><br>In this sentence, '<span style='font-weight: bolder;font-style:italic;'>gracefully</span>' describes the way the dancers were twirling and leaping. It tells us about the quality or manner of their movement – that they were moving with grace, elegance, and poise. <br><br><span style='background-color:yellow;color:blue;'>For example</span>, if we wanted to describe the appearance of the dancers, we could use adjectives like 'delicate,' 'graceful,' or 'enchanting.' <br><br>These all are adjectives of quality as they describe the features and characteristics of a noun.",
+
+                      " <span style='font-weight: bolder;'> Adjectives of quantity </span> can come before or after the noun they modify, depending on the sentence structure. <br><br><u>Here are some examples of adjectives of quantity:</u> Few, Many, Several, Plenty, Lots, Numerous, Little, Some, etc. <br><br> <span style='background-color:yellow;color:blue;'> For example:</span><br> <i>'There were few cookies left in the jar.'</i> <br> The adjective '<span style='color:blue;'>few</span>' tells us there was a small number of cookies remaining.<br><br> <i>'Lily received many presents on her birthday.'</i> <br> The adjective '<span style='color:blue;'>many</span>' indicates a large number of presents. <br><br>Well, it’s time to read the final part of our story……..",
+
+                      "From that day on, Lily and her grandma would wind up at the music box every evening, marvelling at the tiny dancers and sharing stories of their own childhood adventures. The magical music box brought them closer together, filling their hearts with wonder and creating cherished memories that would last a lifetime.",
+
+                      "look at this sentence: <br><br> “<span style='color: blue;'>The magical music box brought them closer together.</span>” <br><br>The word “<span style='color: blueviolet;font-style:italic;'>magical</span>” here is an adjective which is describing the music box.  <br><br>'<span style='font-weight:bolder;'>Magical</span>' is an adjective of quality that describes the music box. It suggests that the music box had some enchanting or extraordinary qualities, beyond just being an ordinary music box.",
+
+                      "<img src='10th.jpg' style='width: 100%;' alt=''>",
+
+                      "Let us quickly revise it one more time: <br><br><u><span style='color: blue;'>Adjective of Quality</span></u>: As the name suggests, it describes the quality of a noun. They give us information on the state, condition or character of the noun. <br><br><u><span style='color: blueviolet;'>Adjective of Quantity</span></u>: It is a type of adjective that indicates the quantity of a noun in a sentence. It is used to indicate a specific but not exact quantity.",
+
+                      "Let us now understand the form of adjectives: <br><br>There are three forms of adjectives in English grammar. They are also known as the degrees of comparison. <br><br>The three forms of adjectives are:  <br><li>The Positive or Absolute Form </li><li>The Comparative Form </li><li>The Superlative Form </li>",
+
+                      "<u><span style='color: blue;'>The Positive or Absolute Form</span></u>: The positive form of an adjective is the basic form that describes a quality without comparing it to anything else. <br><br> <span style='color: blue;background-color:yellow;'> Examples</span>:  <br><li>The apple is <span style='font-weight:bolder;'> red. </span> </li><li>My sister is <span style='font-weight:bolder;'> tall.</span> </li><li>That book is <span style='font-weight:bolder;'> interesting.</span></li>",
+
+                      "<u><span style='color: blue;'>The Comparative Form</span></u>: The comparative form of an adjective compares two things or people based on a particular quality. <br><br> <span style='color: blue;background-color:yellow;'>Examples</span>:  <br><li>John is <span style='font-weight:bolder;'> taller </span> than his brother. (John has more of the quality of being tall.)</li><li>My backpack is <span style='font-weight:bolder;'> heavier </span> than yours. (My backpack has more of the quality of being heavy.) </li><li>Today is <span style='font-weight:bolder;'> colder </span> than yesterday. (Today has less of the quality of being warm.)</li>",
+
+                     
+
+
+
+                    ]
+
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "The Magical Music Box";
+                    document.getElementById("story").innerHTML = "<u><span style='color: blue;'>The Superlative Form</u>: The superlative form of an adjective compares three or more things or people based on a particular quality. <br><br><span style='color: blue;background-color:yellow;'>Examples</span>:  <br><li>Mount Everest is the <span style='font-weight:bolder;'> highest </span> mountain in the world. (It has the most of the quality of being high among many other mountains in the world)</li><li> Sarah is the  <span style='font-weight:bolder;'>fastest </span> runner in our class. (There are many students in the class and Sarah has the most of the quality of being fast.)</li><li> This is the most <span style='font-weight:bolder;'> delicious </span> cake I've ever tasted. (It has the most of the quality of being delicious.)</li>";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The Magical Music Box"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                   // document.getElementById("story").style.backgroundColor="lightblue"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adjectives"
+                    document.getElementById("story").innerHTML = " Today, we're going to embark on an exciting adventure into the world of adjectives. <br><br>Have you ever wondered how we can make our words more colourful, more vivid, and more interesting? Well, that's where<span style='color: red;'>adjectives</span> come into play! <br><br>Imagine you are in a beautiful garden with many different kinds of flowers. If you just say 'flowers', it does not really tell us much about them, does it?  <br><br>But what if you said 'bright red roses', 'beautiful white lilies', or 'tall sunflowers with yellow petals'? That sounds much better, right?"
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="The Magical Music Box"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
